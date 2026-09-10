@@ -3,6 +3,7 @@ import { ArrowRight, Instagram, MapPin } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useState } from "react";
 
+import logoAsset from "@/assets/dd-logo.png.asset.json";
 import donutHero from "@/assets/donut-hero.jpg";
 import lagosNutty from "@/assets/lagos-nutty.jpg";
 import miloMadness from "@/assets/milo-madness.jpg";
@@ -44,11 +45,16 @@ function Index() {
   return (
     <div className="min-h-screen overflow-hidden bg-cream font-sans text-ink selection:bg-brand/25">
       <header className="relative z-20 mx-auto flex max-w-6xl items-center justify-between px-5 pt-6 sm:px-8">
-        <a href="#top" className="flex items-center gap-2.5" aria-label="Donut District home">
-          <motion.span whileHover={{ rotate: 180 }} transition={{ duration: 0.5 }} className="grid size-8 place-items-center rounded-full bg-brand">
-            <span className="size-3 rounded-full bg-cream" />
-          </motion.span>
-          <span className="font-display text-xl font-semibold">Donut District</span>
+        <a href="#top" className="flex items-center" aria-label="Donut District home">
+          <motion.img
+            src={logoAsset.url}
+            alt="Donut District logo"
+            width={140}
+            height={48}
+            className="h-12 w-auto"
+            whileHover={{ scale: 1.04 }}
+            transition={{ duration: 0.25 }}
+          />
         </a>
         <nav className="hidden items-center gap-8 text-sm font-medium text-ink/70 md:flex" aria-label="Main navigation">
           <a href="#collection" className="nav-link">Collection</a>
