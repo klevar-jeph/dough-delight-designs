@@ -165,10 +165,20 @@
 @utility nav-link {
   color: color-mix(in oklab, var(--ink) 70%, transparent);
   transition: color 180ms ease;
-  &:hover { color: var(--ink); }
+  &:hover {
+    color: var(--ink);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }

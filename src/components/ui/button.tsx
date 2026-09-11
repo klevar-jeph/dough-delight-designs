@@ -14,7 +14,8 @@ const buttonVariants = cva(
         accent: "bg-accent text-cream hover:bg-ink",
         light: "bg-cream text-accent hover:bg-brand hover:text-cream",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground",
+        outline:
+          "border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "text-foreground hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
@@ -38,7 +39,13 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Component = asChild ? Slot : "button";
-    return <Component ref={ref} className={cn(buttonVariants({ variant, size }), className)} {...props} />;
+    return (
+      <Component
+        ref={ref}
+        className={cn(buttonVariants({ variant, size }), className)}
+        {...props}
+      />
+    );
   },
 );
 Button.displayName = "Button";

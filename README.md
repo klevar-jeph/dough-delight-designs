@@ -1,27 +1,50 @@
-# Dough Delight Designs
+# Donut District
 
-https://donutdistrict.food/
-Take a look at this website; I need you to create a better and more professionally simplistic looking version of this single-page website.
+A single-page marketing website for Donut District — premium Nigerian-inspired donuts baked in Benin City.
 
-Use framer-motion and make sure to add lots of cool animations
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/738fde87-2da4-481d-af7b-f87681b5c854).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+Built with React, Vite, Tailwind CSS v4, and Motion (framer-motion).
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requires Node.js and npm.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
+```
+
+The dev server starts at http://localhost:5173/.
+
+## Build
+
+```sh
+npm run build
+```
+
+Production files are emitted to `out/` — static HTML, CSS, JS, and images only. No server or backend is involved; deploy `out/` to any static host.
+
+## Preview production build
+
+```sh
+npm run preview
+```
+
+## Lint & format
+
+```sh
+npm run lint
+npm run format
+```
+
+## Project structure
+
+```
+src/
+├── assets/        # Images (logo, product photos)
+├── components/ui/ # shadcn/ui component library
+├── hooks/         # Custom hooks
+├── lib/           # Utilities (cn helper)
+├── App.tsx        # Page content
+├── main.tsx       # React entry point
+└── styles.css     # Tailwind v4 + design tokens
 ```
